@@ -60,7 +60,7 @@ ax2.yaxis.label.set_color('steelblue')
 ax2.spines['right'].set_color('steelblue')
 ax2.tick_params(axis='y', colors='steelblue')
 #ax2.set_yscale('log')
-ax2.set_ylim(0.1,100)
+ax2.set_ylim(0.1,60)
 ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter('%3.f'))
 ax2.annotate(
     'Frequent beach cleans',
@@ -71,10 +71,10 @@ ax2.annotate(
 
 ax2.annotate(
      'Storm Caroline1',
-    xy=(Days[23], Rate[23]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[18], Rate[23]+10), fontsize=12)
+    xy=(Days[23], Rate[23]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[17], Rate[23]-10), fontsize=12)
 ax2.annotate(
     'Caroline2 (140 kg/day)',
-    xy=(Days[25], Rate[25]-50), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[26], Rate[25]-45), fontsize=12)
+    xy=(Days[25], Rate[25]-80), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[26], Rate[25]-85), fontsize=12)
 ax2.annotate(
     'Storms Dylan + Eleanor',
     xy=(Days[28], Rate[28]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[30], Rate[28]+10), fontsize=12, backgroundcolor ='w')
@@ -84,5 +84,17 @@ ax2.annotate(
 ax2.annotate(
     'Frequent beach cleans',
     xy=(Days[51], Rate[51]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[52], Rate[51]+10), fontsize=12, backgroundcolor ='w')
+ax2.annotate(
+    'Unamed Storm',
+    xy=(Days[59], Rate[59]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[55], Rate[55]+10), fontsize=12, backgroundcolor ='w')
+ax2.annotate(
+    'Many storms (Gareth)\n& ranger starting',
+    xy=(Days[64], Rate[64]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[59], Rate[64]+5), fontsize=12, backgroundcolor ='w')
+ax2.annotate(
+    'northern storms \n Cape wrath beach clean',
+    xy=(Days[71], Rate[71]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[61], Rate[71]+10), fontsize=12, backgroundcolor ='w')
+ax2.annotate(
+    'Kik Plastic\nbeach clean',
+    xy=(Days[81], Rate[81]), arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",ec="w",fc='k'), xytext=(Days[74], Rate[81]+5), fontsize=12, backgroundcolor ='w')
 
 plt.show()
