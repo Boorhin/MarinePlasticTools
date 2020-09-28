@@ -17,7 +17,7 @@ if args.datadir:
 	WorkingDir = args.datadir
 else:
 	## Default local storage location
-	WorkingDir = r'/media/julien/eSATA1/Julien/Marine plastics/Balnakeil Bin/Data'
+	WorkingDir = r'Data'
 
 
 FileList = sorted(glob.glob(WorkingDir+os.sep+'*.txt'))
