@@ -1,10 +1,25 @@
+import argparse
 import os, sys, csv, datetime, glob
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime as dt
 import matplotlib.dates as mdates
 
-WorkingDir = '/media/julien/eSATA1/Julien/Marine plastics/Balnakeil Bin/Data'
+
+parser = argparse.ArgumentParser('Data Directory for parsing',
+	formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+parser.add_argument( '--datadir', required=False)
+
+args = parser.parse_args(sys.argv[1:])
+if args.datadir:
+	# python WorkingFileForTesting.py --datafile data/dbf900.ebc
+	WorkingDir = args.datadir
+else:
+	## Default local storage location
+	WorkingDir = r'/media/julien/eSATA1/Julien/Marine plastics/Balnakeil Bin/Data'
+
+
 FileList = sorted(glob.glob(WorkingDir+os.sep+'*.txt'))
 
 #d= {}
