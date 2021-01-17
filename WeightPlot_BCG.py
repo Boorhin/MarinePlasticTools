@@ -17,7 +17,9 @@ def butter_lowpass_filtfilt(data, cutoff, fs, order=5):
     return y
 
 
-WorkingDir = os.getcwd()
+# Data directory: MarinePlasicTools/Weight
+# WorkingDir = os.getcwd()
+WorkingDir = 'Weight'
 File = 'BeachCleanGirl_Weight.txt'
 
 DATA  = np.genfromtxt(WorkingDir+os.sep+File, dtype=[('Date','datetime64[D]'),('Weight', 'float32')], delimiter ='\t', skip_header = 1)

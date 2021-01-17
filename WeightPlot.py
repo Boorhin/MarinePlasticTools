@@ -17,7 +17,8 @@ def butter_lowpass_filtfilt(data, cutoff, fs, order=5):
     y = filtfilt(b, a, data)
     return y
 
-WorkingDir = '/media/julien/eSATA1/Julien/Marine plastics/Balnakeil Bin/Weight'
+# Data directory: MarinePlasticTools/Weight
+WorkingDir = 'Weight'
 File = 'Weight_Data.txt'
 
 DATA  = np.genfromtxt(WorkingDir+os.sep+File, dtype=[('Date','datetime64[D]'),('Weight', 'float32'), ('Deviation', 'float32')], delimiter ='\t', skip_header = 1)
